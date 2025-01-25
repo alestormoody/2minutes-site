@@ -1,0 +1,14 @@
+{
+    "name": "alestormoody/php-light",
+    "description": "Framework PHP leggero con CLI per compilazione asset",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "php": "^7.4|^8.0"
+    }
+}
