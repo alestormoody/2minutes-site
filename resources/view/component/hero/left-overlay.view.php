@@ -1,29 +1,3 @@
-
-<style>
-    @media screen and (max-width: 768px) {
-        #hero-left-overlay {
-            padding: 0 10px;
-        }
-
-        .hero-content {
-            padding: 40px 20px;
-        }
-
-        .background-image {
-            display: none;
-        }
-
-        .background-image-mobile img {
-            display: block;
-        }
-
-        .overlay {
-            background: linear-gradient(to bottom, black, transparent);
-        }
-    }
-</style>
-
-
 <div id="hero-left-overlay" class="relative flex justify-start items-center h-[80vh] max-h-[666px] w-full px-[80px] overflow-hidden">
     <div class="background-image absolute top-0 left-0 w-full h-[80vh] z-0 mx-auto">
         <img src="<?= $desktopImage ?>" alt="Background" class="h-[80vh] w-full object-cover" />

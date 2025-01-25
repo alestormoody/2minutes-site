@@ -1,26 +1,3 @@
-<style>
-    @media screen and (max-width: 768px) {
-        #hero-right-boxed {
-            padding: 0;
-        }
-
-        .hero-content {
-            width: 90%;
-            padding: 30px;
-            right: 5%;
-            left: 5%;
-        }
-
-        .background-image {
-            display: none;
-        }
-
-        .background-image-mobile img {
-            display: block;
-        }
-    }
-</style>
-
 <div id="hero-right-boxed" class="relative flex justify-end items-center h-[80vh] max-h-[666px] w-full overflow-hidden">
     <div class="background-image absolute top-0 left-0 w-full h-[80vh] z-0">
         <img src="<?= $desktopImage ?>" alt="Background" class="h-[80vh] w-full object-cover" />
