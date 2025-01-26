@@ -56,7 +56,6 @@ function pathFinder($filePath) {
     }
 }
 
-
 function componentsStandard($page) {
     $config = include pathFinder('config/components.php');
     foreach ($config as $key => $value) {

@@ -20,7 +20,7 @@
                 <?php endforeach; ?>
             </div>
             <button class="bg-blue-600 text-white font-bold uppercase py-2 px-6 rounded hover:bg-blue-700">
-                Button
+            <?= $buttonLabel ?>
             </button>
         </div>
 
@@ -40,7 +40,7 @@
         <?php endforeach; ?>
     </div>
 
-    <form id="action-navbar" action="#" method="GET" class="hidden"></form>
+    <form id="action-navbar" action="<?= $buttonUrl ?>" method="GET" class="hidden"></form>
 </div>
 
 <script>

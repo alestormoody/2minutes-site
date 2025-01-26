@@ -2,7 +2,7 @@
     <div class="slider-container h-full relative overflow-hidden">
         <?php foreach ($slides as $index => $slide): ?>
             <div
-                class="slide h-full w-full flex-shrink-0 absolute top-0 left-0 transition-transform duration-700 ease-in-out <?= $index === 0 ? 'translate-x-0' : 'translate-x-full' ?>">
+                class="slideHero h-full w-full flex-shrink-0 absolute top-0 left-0 transition-transform duration-700 ease-in-out <?= $index === 0 ? 'translate-x-0' : 'translate-x-full' ?>">
                 <img src="<?= $slide['desktopImage'] ?>" alt="Background"
                     class="hidden md:block absolute top-0 left-0 h-full w-full object-cover" />
                 <img src="<?= $slide['mobileImage'] ?>" alt="Background"
@@ -31,50 +31,50 @@
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentIndex = 0;
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.slideHero');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove('translate-x-0', 'translate-x-full', 'translate-x-[-100%]');
-            if (i === index) {
-                slide.classList.add('translate-x-0'); // current view
-            } else if (i < index) {
-                slide.classList.add('translate-x-[-100%]'); // previous view
-            } else {
-                slide.classList.add('translate-x-full'); // next view
-            }
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('translate-x-0', 'translate-x-full', 'translate-x-[-100%]');
+                if (i === index) {
+                    slide.classList.add('translate-x-0'); // current view
+                } else if (i < index) {
+                    slide.classList.add('translate-x-[-100%]'); // previous view
+                } else {
+                    slide.classList.add('translate-x-full'); // next view
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.remove('opacity-100');
+                dot.classList.add('opacity-50');
+                if (i === index) {
+                    dot.classList.add('opacity-100');
+                    dot.classList.remove('opacity-50');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            showSlide(currentIndex);
+        }
+
+        // apply event to each dot
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
         });
 
-        dots.forEach((dot, i) => {
-            dot.classList.remove('opacity-100');
-            dot.classList.add('opacity-50');
-            if (i === index) {
-                dot.classList.add('opacity-100');
-                dot.classList.remove('opacity-50');
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    function goToSlide(index) {
-        currentIndex = index;
-        showSlide(currentIndex);
-    }
-
-    // apply event to each dot
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-        });
+        setInterval(nextSlide, 8000);
     });
-
-    setInterval(nextSlide, 8000);
-});
 </script>
