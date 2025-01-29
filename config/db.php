@@ -2,7 +2,7 @@
 
 return [
     'host' => 'localhost',
-    'database' => 'nome_database',
+    'database' => 'php-light',
     'username' => 'root',
     'password' => 'password',
 ];

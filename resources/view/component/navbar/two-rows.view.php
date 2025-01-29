@@ -1,6 +1,4 @@
-
-
-<div id="nav-two-rows" class="bg-gray-300 text-black mx-auto max-w-screen-xl">
+<div id="nav-two-rows" class="bg-gray-100 text-black mx-auto max-w-screen-xl">
     <!-- Prima riga -->
     <div class="flex items-center justify-between py-3 px-8">
         <div class="flex flex-col items-left pt-1 md:pt-0">
@@ -17,7 +15,7 @@
             <nav class="hidden md:flex items-center gap-8">
                 <?php foreach ($menuLinks as $link): ?>
                     <a href="<?= $link['url'] ?>"
-                        class="text-black text-sm font-semibold uppercase tracking-wider hover:text-blue-700 <?= $link['css'] ?>">
+                        class="text-bl75,970ack text-sm font-semibold uppercase tracking-wider hover:text-blue-700 <?= $link['css'] ?>">
                         <?= $link['label'] ?>
                     </a>
                 <?php endforeach; ?>

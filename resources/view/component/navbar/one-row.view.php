@@ -1,5 +1,5 @@
 <div id="nav-one-row" class="bg-white border-b border-gray-200">
-    <div class="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-3">
+    <div class=" mx-auto flex items-center justify-between px-6 py-3">
         <!-- Logo -->
         <div class="font-bold text-xl text-blue-600 uppercase">
         <?php if ($logo): ?>
@@ -20,7 +20,7 @@
                 <?php endforeach; ?>
             </div>
             <button class="bg-blue-600 text-white font-bold uppercase py-2 px-6 rounded hover:bg-blue-700">
-            <?= $buttonLabel ?>
+                <?= $buttonLabel ?>
             </button>
         </div>
 

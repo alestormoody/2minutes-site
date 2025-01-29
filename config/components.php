@@ -15,35 +15,34 @@ return [
    'navbar.one-row' =>
       [
          'active' => true,
-         'pages' => [
-            'index' => [
-               'name' => 'My Logo',
-               'logo' => '',
-               'menuLinks' => [
-                  [
-                     'label' => 'Home',
-                     'url' => '#home',
-                     'css' => '',
-                  ],
-                  [
-                     'label' => 'About',
-                     'url' => '#about',
-                     'css' => 'text-red-500',
-                  ],
-                  [
-                     'label' => 'Services',
-                     'url' => '#services',
-                     'css' => '',
-                  ],
-                  [
-                     'label' => 'Contact',
-                     'url' => '#contact',
-                     'css' => '',
-                  ],
+         'pages' => ['index'],
+         'data' => [
+            'name' => 'My Custom Logo',
+            'logo' => '',
+            'menuLinks' => [
+               [
+                  'label' => 'Home',
+                  'url' => '#home',
+                  'css' => '',
                ],
-               'buttonLabel' => 'Login',
-               'buttonUrl' => '/login',
+               [
+                  'label' => 'About',
+                  'url' => '#about',
+                  'css' => 'text-red-500',
+               ],
+               [
+                  'label' => 'Services',
+                  'url' => '#services',
+                  'css' => '',
+               ],
+               [
+                  'label' => 'Contact',
+                  'url' => '#contact',
+                  'css' => '',
+               ],
             ],
+            'buttonLabel' => 'Login',
+            'buttonUrl' => '/login',
          ],
       ],
    'navbar.two-rows' => [
@@ -179,6 +178,81 @@ return [
             ],
          ],
       ],
+   ],
+   'block.four-boxes' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data'=> [
+         'left' => [
+            'desktopImage' => '/image/placeholder.avif',
+            'mobileImage' => '/image/placeholder.avif',
+            'title' => 'Title 1',
+            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+         ],
+         'right' => [
+            'desktopImage' => '/image/placeholder.avif',
+            'mobileImage' => '/image/placeholder.avif',
+            'title' => 'Title 2',
+            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+         ]
+      ]
+   ],
+   'block.two-boxes' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data'=> [
+         'desktopImage' => '/image/placeholder.avif',
+         'mobileImage' => '/image/placeholder.avif',
+         'title' => 'Title',
+         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+      ]
+   ],
+   'block.two-text-boxes' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data'=> [
+         'left' => [
+            'title' => 'Title 1',
+            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+         ],
+         'right' => [
+            'title' => 'Title 2',
+            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+         ]
+      ]
+   ],
+   'block.one-box' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data'=> [
+         'title' => 'Title',
+         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+      ]
+   ],
+   'map.two-boxes' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data'=> [
+         'title' => 'Office',
+         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+         'address' => 'street here',
+         'phone' => 'phone here ',
+         'email' => 'email here ',
+      ]
+   ],
+   'animated.three-count' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data'=> [
+         'title' => 'Numbers',
+         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+         'n1_title' => 'lorem ipsum dolor sit amet',
+         'n1' => '100',
+         'n2_title' => 'lorem ipsum dolor sit amet',
+         'n2' => '50',
+         'n3_title' => 'lorem ipsum dolor sit amet',
+         'n3' => '10',
+      ]
    ],
 
 ];
