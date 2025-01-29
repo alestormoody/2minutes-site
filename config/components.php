@@ -235,9 +235,9 @@ return [
       'data'=> [
          'title' => 'Office',
          'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         'address' => 'street here',
-         'phone' => 'phone here ',
-         'email' => 'email here ',
+         'address' => 'Roma street, 1 - 00100 Rome IT',
+         'phone' => '+987 654 321 01 ',
+         'email' => 'foo@bar.ext',
       ]
    ],
    'animated.three-count' => [

@@ -17,7 +17,7 @@ class Compiler
     // Inizializza la lista dei file da compilare
     public static function init()
     {
-        self::$filesToCompile = include __DIR__ . '/config/assets.php';
+        self::$filesToCompile = include __DIR__ . '/../../config/assets.php';
     }
 
     /**
@@ -88,6 +88,6 @@ if (php_sapi_name() === 'cli') {
         Compiler::init();  // Inizializza i file da compilare
         Compiler::compileAll();  // Esegue la compilazione
     } else {
-        echo "Comando non riconosciuto. Usa: php cli:minify\n";
+        echo "Comando non riconosciuto. Usa: php app/cli/Compiler.php cli:minify\n";
     }
 }

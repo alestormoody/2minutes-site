@@ -8,11 +8,16 @@
                 <img src="<?= $slide['mobileImage'] ?>" alt="Background"
                     class="block md:hidden absolute top-0 left-0 h-full w-full object-cover" />
 
-                <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-black to-transparent opacity-90"></div>
+                <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-black to-transparent opacity-90">
+                </div>
 
                 <div class="absolute right-[15%] bottom-[130px] text-center w-[75%] max-w-[400px] z-10">
-                    <h2 class="text-white text-[40px] font-normal mb-[30px]"><?= $slide['title'] ?></h2>
-                    <p class="text-white text-[16px] leading-[150%] mb-[30px]"><?= $slide['subtitle'] ?></p>
+                    <div class="text-5xl font-semibold tracking-tight text-white sm:text-5xl">
+                        <?= $slide['title'] ?>
+                    </div>
+                    <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
+                        <?= $slide['subtitle'] ?>
+                    </p>
                 </div>
             </div>
         <?php endforeach; ?>

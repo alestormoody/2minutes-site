@@ -1,34 +1,45 @@
-<div id="animated-three-count">
-    <div class="w-full mt-8 pt-8">
-        <div class="flex flex-col justify-center items-center">
-            <div class="text-5xl">
-                <?= $title ?>
+<div id="animated-three-count" class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base/7 text-gray-600"><?= $n1_title ?></dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    <span id="stats1" data-target="<?= $n1 ?>">0</span> %
+                </dd>
             </div>
-            <p class="text-2xl w-1/2 text-center">
-                <?= $subtitle ?>
-            </p>
-        </div>
-        <div class="w-full flex">
-            <div class="sm:hidden md:block w-1/3 aspect-square p-8">
-                <div class="w-full p-4 flex flex-col justify-center items-center">
-                    <div class="text-8xl"><span id="stats1"><?= $n1 ?></span> %</div>
-                    <p class="text-2xl"><?= $n1_title ?></p>
-                </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base/7 text-gray-600"><?= $n2_title ?></dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    <span id="stats2" data-target="<?= $n2 ?>">0</span> %
+                </dd>
             </div>
-            <div class="sm:hidden md:block w-1/3 aspect-square p-8">
-                <div class="w-full p-4 flex flex-col justify-center items-center">
-                    <div class="text-8xl"><span id="stats2"><?= $n2 ?></span> %</div>
-                    <p class="text-2xl"><?= $n2_title ?></p>
-                </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base/7 text-gray-600"><?= $n3_title ?></dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    <span id="stats3" data-target="<?= $n3 ?>">0</span> %
+                </dd>
             </div>
-            <div class="sm:hidden md:block w-1/3 aspect-square p-8">
-                <div class="w-full p-4 flex flex-col justify-center items-center">
-                    <div class="text-8xl"><span id="stats3"><?= $n3 ?></span> %</div>
-                    <p class="text-2xl"><?= $n3_title ?></p>
-                </div>
-            </div>
-        </div>
+        </dl>
     </div>
 </div>
 
-<!-- TODO : animate the numbers loading -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('#animated-three-count [id^="stats"]');
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / 200;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 10);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+});
+</script>

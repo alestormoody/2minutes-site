@@ -8,10 +8,16 @@
                     <img src="<?= $slide['desktopImage'] ?>" alt="<?= $slide['title'] ?>"
                         class="w-full min-h-[500px] object-cover object-center hidden md:block" />
                     <div
+                        class="overlay absolute top-0 right-0 w-full h-[80vh] z-1 bg-gradient-to-l from-black to-transparent opacity-75">
+                    </div>
+                    <div
                         class="absolute inset-y-0 right-0 left-0 md:left-auto md:right-[15%] p-4 text-white w-full md:w-[45%] max-w-full md:max-w-[400px] flex flex-col justify-end md:justify-center z-20 font-inter text-base font-normal leading-[150%]">
-                        <div class="bg-gradient-to-t from-black/80 via-black/50 to-transparent absolute inset-0 md:hidden"> </div>
-                        <p class="text-4xl font-normal mb-7"><?= $slide['title'] ?></p>
-                        <p class="mb-0"><?= $slide['subtitle'] ?></p>
+                        <div class="text-5xl font-semibold tracking-tight text-white sm:text-5xl z-4">
+                            <?= $slide['title'] ?>
+                        </div>
+                        <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
+                            <?= $slide['subtitle'] ?>
+                        </p>
                     </div>
                 </li>
             <?php endforeach; ?>

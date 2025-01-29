@@ -19,9 +19,11 @@
                     </a>
                 <?php endforeach; ?>
             </div>
-            <button class="bg-blue-600 text-white font-bold uppercase py-2 px-6 rounded hover:bg-blue-700">
-                <?= $buttonLabel ?>
-            </button>
+            <form id="action-navbar" action="<?= $buttonUrl ?>" method="GET">
+                <button class="bg-blue-600 text-white font-bold uppercase py-2 px-6 rounded hover:bg-blue-700">
+                    <?= $buttonLabel ?>
+                </button>
+            </form>
         </div>
 
         <!-- Hamburger Menu Icon -->
@@ -39,8 +41,6 @@
             </a>
         <?php endforeach; ?>
     </div>
-
-    <form id="action-navbar" action="<?= $buttonUrl ?>" method="GET" class="hidden"></form>
 </div>
 
 <script>

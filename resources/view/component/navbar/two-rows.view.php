@@ -24,9 +24,11 @@
 
         <!-- Actions (Button and Community) -->
         <div class="hidden md:flex items-center flex-col gap-3">
-            <button class="bg-blue-600 text-white font-bold uppercase py-2 px-6 rounded hover:bg-blue-700 w-full">
-                <?= $buttonLabel ?>
-            </button>
+            <form id="action-navbar" action="<?= $buttonUrl ?>" method="GET">
+                <button class="bg-blue-600 text-white font-bold uppercase py-2 px-6 rounded hover:bg-blue-700">
+                    <?= $buttonLabel ?>
+                </button>
+            </form>
             <a href="<?= $communityUrl ?>"
                 class="text-sm text-black font-medium uppercase hover:text-blue-700">
                 <?= $communityLabel ?>

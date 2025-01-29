@@ -11,9 +11,17 @@
  */
 
 use App\Service\Route;
+use App\Controller\AuthController;
 
 Route::get('/', function () {
     view('page.index');
+});
+
+Route::get('/login', function (){
+    view('page.login');
+});
+Route::post('/login', function(){
+    AuthController::login($_POST['email'], $_POST['password']);
 });
 
 // In route.php o nel tuo file di routing
