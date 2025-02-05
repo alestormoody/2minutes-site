@@ -1,4 +1,4 @@
-# PHP-Light MVC
+# 2minutes-site MVC
 
 Light php-mvc with css/js compiler to handle small projects
 
