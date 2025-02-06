@@ -1,6 +1,6 @@
 <?php 
 /**
- * @package     php-light
+ * @package     2minutes-site
  * @author      alessio tortolini
  * @copyright   Copyright (c) 2024-2025, alessio tortolini
  * @license     MIT License
