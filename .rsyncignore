@@ -1,1 +1,8 @@
-
+.git/
+node_modules/
+.env
+*.log
+.DS_Store
+# Ignora cartelle specifiche
+temp/
+cache/
