@@ -17,5 +17,10 @@ jobs:
 
       - name: Deploy files
         run: |
-          scp -r -o StrictHostKeyChecking=no -P ${{ secrets.A2_PORT }} \
-          ./ ${{ secrets.A2_USER }}@${{ secrets.A2_HOST }}:${{ secrets.A2_PATH }}
+          rsync -avz \
+          --progress \
+          --delete \
+          --exclude-from=".rsyncignore" \
+          -e "ssh -p ${{ secrets.A2_PORT }} -o LogLevel=ERROR -o StrictHostKeyChecking=no" \
+          ./ ${{ secrets.A2_USER }}@${{ secrets.A2_HOST }}:${{ secrets.A2_PATH}}
+
