@@ -17,20 +17,19 @@ class AuthController
 {
     public static function login($email, $password)
     {
-
-        // TODO : to rewrite
-        $db = Db::getInstance(); // removed from Db class
-        $stmt = $db->prepare("SELECT * FROM users WHERE email = :email");
-        $stmt->execute(['email' => $email]);
-        $user = $stmt->fetch();
-
-        if ($user && password_verify($password, $user['password'])) {
+        $user = Db::table('users')
+            ->select('*')
+            ->where('email', '=', $email)
+            ->get();
+    
+        if (!empty($user) && password_verify($password, $user[0]->password)) {
             session_start();
-            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_id'] = $user[0]->id;
             return true;
         }
         return false;
     }
+    
 
     public static function logout()
     {

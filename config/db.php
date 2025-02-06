@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'host' => 'localhost',
-    'database' => 'nome_database',
+    'host' => '127.0.0.1',  // Oppure 'localhost'
+    'database' => 'php_light',  // Il nome del database che vuoi usare
     'username' => 'root',
-    'password' => 'password',
+    'password' => '',  // Generalmente su Homebrew MySQL l'utente root non ha password per impostazione predefinita
 ];

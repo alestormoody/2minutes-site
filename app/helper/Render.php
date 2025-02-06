@@ -11,8 +11,9 @@
  */
 function render($component, $data = [])
 {
+
     $baseDir = __DIR__ . '/../../resources/view/';
-    
+
     // Sostituisci i punti con slash e aggiungi l'estensione
     $componentPath = $baseDir . str_replace('.', '/', $component) . '.view.php';
 
