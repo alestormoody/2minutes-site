@@ -1,0 +1,26 @@
+name: Initial Deploy to A2 Hosting
+
+on:
+  workflow_dispatch: # Permite l'avvio manuale
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.A2_SSH_KEY }}
+
+      - name: Full Deploy
+        run: |
+          echo "🎯 Inizio deploy iniziale..."
+          rsync -avz --progress --delete \
+          -e "ssh -p ${{ secrets.A2_PORT }} -o StrictHostKeyChecking=no" \
+          ./ ${{ secrets.A2_USER }}@${{ secrets.A2_HOST }}:${{ secrets.A2_PATH }}
+          echo "✅ Deploy completato!"
