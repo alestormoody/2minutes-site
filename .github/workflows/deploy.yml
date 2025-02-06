@@ -24,3 +24,8 @@ jobs:
           -e "ssh -p ${{ secrets.A2_PORT }} -o LogLevel=ERROR -o StrictHostKeyChecking=no" \
           ./ ${{ secrets.A2_USER }}@${{ secrets.A2_HOST }}:${{ secrets.A2_PATH}}
 
+      - name: Sync files
+        run: |
+          rsync -avz --exclude-from="$GITHUB_WORKSPACE/.rsyncignore" \
+          -e "ssh -p ${{ secrets.A2_PORT }}" \
+          ./ ${{ secrets.A2_USER }}@${{ secrets.A2_HOST }}:${{ secrets.A2_PATH }}
