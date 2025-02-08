@@ -1,5 +1,5 @@
-<?= component('layout.head', [ 'title' => '30 Minutes Site', 'body' => '']) ?>
-<?= componentsStandard('index') ?>
+<?= component('layout.head', [ 'title' => '2Minutes-Site', 'body' => '']) ?>
+<?= printComponents('index') ?>
 <?= component('layout.footer') ?>
 
 <!-- TODO : fix mobile ver of components -->

@@ -56,7 +56,7 @@ function pathFinder($filePath) {
     }
 }
 
-function componentsStandard($page) {
+function printComponents($page) {
     $config = include pathFinder('config/components.php');
     foreach ($config as $key => $value) {
         if($config[$key]['active'] && in_array($page, $config[$key]['pages'])) {
