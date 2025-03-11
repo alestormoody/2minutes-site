@@ -20,8 +20,13 @@ Route::get('/', function () {
 Route::get('/login', function (){
     view('page.login');
 });
+
 Route::post('/login', function(){
     AuthController::login($_POST['email'], $_POST['password']);
+});
+
+Route::get('/404', function(){
+    view('page.404');
 });
 
 // In route.php o nel tuo file di routing

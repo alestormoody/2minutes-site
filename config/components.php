@@ -12,40 +12,8 @@
  */
 
 return [
-   'navbar.one-row' =>
-      [
-         'active' => true,
-         'pages' => ['index'],
-         'data' => [
-            'name' => 'My Custom Logo',
-            'logo' => '',
-            'menuLinks' => [
-               [
-                  'label' => 'Home',
-                  'url' => '#home',
-                  'css' => '',
-               ],
-               [
-                  'label' => 'About',
-                  'url' => '#about',
-                  'css' => 'text-red-500',
-               ],
-               [
-                  'label' => 'Services',
-                  'url' => '#services',
-                  'css' => '',
-               ],
-               [
-                  'label' => 'Contact',
-                  'url' => '#contact',
-                  'css' => '',
-               ],
-            ],
-            'buttonLabel' => 'Login',
-            'buttonUrl' => '/login',
-         ],
-      ],
-   'navbar.two-rows' => [
+   'navbar' =>
+   [
       'active' => true,
       'pages' => ['index'],
       'data' => [
@@ -75,184 +43,178 @@ return [
          ],
          'buttonLabel' => 'Login',
          'buttonUrl' => '/login',
-         'communityLabel' => 'subscribe',
-         'communityUrl' => '/subscribe',
-      ]
-   ],
-   'hero.center-overlay' => [
-      'active' => true,
-      'pages' => ['index'],
-      'data' => [
-         'desktopImage' => '/image/placeholder.avif',
-         'mobileImage' => '/image/placeholder.avif',
-         'title' => 'HERO SECTION TITLE',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         'buttonLabel' => 'Button',
-         'buttonUrl' => '#'
-      ]
-   ],
-   'hero.left-overlay' => [
-      'active' => true,
-      'pages' => ['index'],
-      'data' => [
-         'desktopImage' => '/image/placeholder.avif',
-         'mobileImage' => '/image/placeholder.avif',
-         'title' => 'HERO SECTION TITLE',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         'buttonLabel' => 'Button',
-         'buttonUrl' => '#',
       ],
    ],
-   'hero.right-overlay' => [
+   'navbar-dark' =>
+   [
       'active' => true,
       'pages' => ['index'],
       'data' => [
-         'desktopImage' => '/image/placeholder.avif',
-         'mobileImage' => '/image/placeholder.avif',
-         'title' => 'HERO SECTION TITLE',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         'buttonLabel' => 'Button',
-         'buttonUrl' => '#',
-      ],
-   ],
-   'hero.right-boxed' => [
-      'active' => true,
-      'pages' => ['index'],
-      'data' => [
-         'desktopImage' => '/image/placeholder.avif',
-         'mobileImage' => '/image/placeholder.avif',
-         'title' => 'HERO SECTION TITLE',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         'buttonLabel' => 'Button',
-         'buttonUrl' => '#',
-      ],
-   ],
-   'hero.right-slider' => [
-      'active' => true,
-      'pages' => ['index'],
-      'data' => [
-         'slides' => [
+         'name' => 'My Custom Logo',
+         'logo' => '',
+         'menuLinks' => [
             [
-               'desktopImage' => '/image/placeholder.avif',
-               'mobileImage' => '/image/placeholder.avif',
-               'title' => 'Slider Title 1',
-               'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+               'label' => 'Home',
+               'url' => '#home',
+               'css' => '',
             ],
             [
-               'desktopImage' => '/image/placeholder.avif',
-               'mobileImage' => '/image/placeholder.avif',
-               'title' => 'Slider Title 2',
-               'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+               'label' => 'About',
+               'url' => '#about',
+               'css' => 'text-red-500',
             ],
             [
-               'desktopImage' => '/image/placeholder.avif',
-               'mobileImage' => '/image/placeholder.avif',
-               'title' => 'Slider Title 3',
-               'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
+               'label' => 'Services',
+               'url' => '#services',
+               'css' => '',
+            ],
+            [
+               'label' => 'Contact',
+               'url' => '#contact',
+               'css' => '',
             ],
          ],
+         'buttonLabel' => 'Login',
+         'buttonUrl' => '/login',
       ],
    ],
-   'slider.full-width' => [
+   'hero' =>
+   [
+      'active' => false,
+      'pages' => ['index'],
+      'data' => [
+         'name' => 'My Custom Logo',
+         'logo' => '',
+         'menuLinks' => [
+            [
+               'label' => 'Home',
+               'url' => '#home',
+               'css' => '',
+            ],
+            [
+               'label' => 'About',
+               'url' => '#about',
+               'css' => 'text-red-500',
+            ],
+            [
+               'label' => 'Services',
+               'url' => '#services',
+               'css' => '',
+            ],
+            [
+               'label' => 'Contact',
+               'url' => '#contact',
+               'css' => '',
+            ],
+         ],
+         'buttonLabel' => 'Login',
+         'buttonUrl' => '/login',
+      ],
+   ],
+   'header' =>
+   [
       'active' => true,
       'pages' => ['index'],
       'data' => [
-         'slides' => [
-            [
-               'desktopImage' => '/image/placeholder.avif',
-               'mobileImage' => '/image/placeholder.avif',
-               'title' => 'Slider Title 1',
-               'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-            ],
-            [
-               'desktopImage' => '/image/placeholder.avif',
-               'mobileImage' => '/image/placeholder.avif',
-               'title' => 'Slider Title 2',
-               'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-            ],
-            [
-               'desktopImage' => '/image/placeholder.avif',
-               'mobileImage' => '/image/placeholder.avif',
-               'title' => 'Slider Title 3',
-               'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-            ],
-         ],
       ],
    ],
-   'block.four-boxes' => [
+   'feature' =>
+   [
       'active' => true,
       'pages' => ['index'],
-      'data'=> [
-         'left' => [
-            'desktopImage' => '/image/placeholder.avif',
-            'mobileImage' => '/image/placeholder.avif',
-            'title' => 'Title 1',
-            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         ],
-         'right' => [
-            'desktopImage' => '/image/placeholder.avif',
-            'mobileImage' => '/image/placeholder.avif',
-            'title' => 'Title 2',
-            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         ]
-      ]
+      'data' => [
+      ],
    ],
-   'block.two-boxes' => [
+   'content' =>
+   [
       'active' => true,
       'pages' => ['index'],
-      'data'=> [
-         'desktopImage' => '/image/placeholder.avif',
-         'mobileImage' => '/image/placeholder.avif',
-         'title' => 'Title',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-      ]
+      'data' => [
+      ],
    ],
-   'block.two-text-boxes' => [
+   'bento' =>
+   [
       'active' => true,
       'pages' => ['index'],
-      'data'=> [
-         'left' => [
-            'title' => 'Title 1',
-            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         ],
-         'right' => [
-            'title' => 'Title 2',
-            'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         ]
-      ]
+      'data' => [
+      ],
    ],
-   'block.one-box' => [
+   'promo' =>
+   [
       'active' => true,
       'pages' => ['index'],
-      'data'=> [
-         'title' => 'Title',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-      ]
+      'data' => [
+      ],
    ],
-   'map.two-boxes' => [
+   'product-features' =>
+   [
       'active' => true,
       'pages' => ['index'],
-      'data'=> [
-         'title' => 'Office',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         'address' => 'Roma street, 1 - 00100 Rome IT',
-         'phone' => '+987 654 321 01 ',
-         'email' => 'foo@bar.ext',
-      ]
+      'data' => [
+      ],
    ],
-   'animated.three-count' => [
+   'cta' =>
+   [
       'active' => true,
       'pages' => ['index'],
-      'data'=> [
-         'title' => 'Numbers',
-         'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus volutpat scelerisque a pharetra sapien eget platea vitae.',
-         'n1_title' => 'lorem ipsum dolor sit amet',
-         'n1' => '100',
-         'n2_title' => 'lorem ipsum dolor sit amet',
-         'n2' => '50',
-         'n3_title' => 'lorem ipsum dolor sit amet',
-         'n3' => '10',
-      ]
+      'data' => [
+      ],
    ],
 
+   'price' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
+   'stats' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
+   'team' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
+   'testimonial' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
+   'logos' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
+   'blog' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
+   'newsletter' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
+   'footer' =>
+   [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+      ],
+   ],
 ];

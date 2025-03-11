@@ -49,7 +49,7 @@ class Route
             call_user_func(self::$routes[$method][$uri]);
         } else {
             http_response_code(404);
-            echo "404 - Route not found";
+            view('page.404');
         }
     }
 }
