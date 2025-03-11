@@ -6,7 +6,7 @@
  * @copyright   Copyright (c) 2024-2025, alessio tortolini
  * @license     MIT License
  * @version     1.0.0
- * @link        https://github.com/alestormoody/php-light
+ * @link        https://github.com/alestormoody/2minutes-site
  *
  * List of components to show in the index.view.php
  */
@@ -17,7 +17,7 @@ return [
          'active' => false,
          'pages' => ['index'],
          'data' => [
-            'name' => 'My Custom Logo',
+            'name' => 'alestort',
             'logo' => '',
             'menuLinks' => [
                [
@@ -28,7 +28,7 @@ return [
                [
                   'label' => 'About',
                   'url' => '#about',
-                  'css' => 'text-red-500',
+                  'css' => '',
                ],
                [
                   'label' => 'Services',
