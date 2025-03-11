@@ -117,13 +117,20 @@ return [
          ]
       ],
    ],
-   'feature' =>
-      [
-         'active' => true,
-         'pages' => ['index'],
-         'data' => [
+   'feature' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+         'title' => 'Un flusso di lavoro più efficiente 🚀',
+         'subtitle' => 'Automatizza il deploy e gestisci le tue applicazioni con facilità grazie alle nostre funzionalità avanzate.',
+         'highlights' => [
+            ['icon' => 'cloud-arrow-up', 'title' => 'Push to deploy.', 'description' => 'Distribuisci il tuo codice in pochi secondi con il supporto a Git.'],
+            ['icon' => 'lock-closed', 'title' => 'SSL certificates.', 'description' => 'Proteggi il tuo sito con certificati SSL gratuiti e rinnovati automaticamente.'],
+            ['icon' => 'database', 'title' => 'Database backups.', 'description' => 'Backup automatici per garantire la sicurezza dei tuoi dati.']
          ],
+         'image' => 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' // Suggerito da Unsplash
       ],
+   ],
    'content' =>
       [
          'active' => false,
