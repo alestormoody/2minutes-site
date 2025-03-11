@@ -93,13 +93,30 @@ return [
          'announcementUrl' => 'https://github.com/alestormoody/2minutes-site/wiki',
       ],
    ],
-   'header' =>
-      [
-         'active' => true,
-         'pages' => ['index'],
-         'data' => [
+   'header' => [
+      'active' => true,
+      'pages' => ['index'],
+      'data' => [
+         'title' => '2minutes-site',
+         'subtitle' => 'Un framework minimalista per sviluppatori, startup e creator. Configura e lancia un sito in pochi minuti, senza complicazioni.',
+         'buttonLabel' => 'Scopri il progetto',
+         'buttonUrl' => '/2minutes-site',
+         'background' => 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply',
+         'links' => [
+            ['label' => '📜 Documentazione', 'url' => '/docs'],
+            ['label' => '🔗 Demo Live', 'url' => '/demo'],
+            ['label' => '⚡ Scarica il Boilerplate', 'url' => 'https://github.com/alestormoody/2minutes-site'],
+            ['label' => '💬 Community', 'url' => '/community']
          ],
+         'stats' => [
+            ['label' => '⏱️ Tempo medio di setup', 'value' => '2 minuti'],
+            ['label' => '💻 Righe di codice minime', 'value' => '< 500'],
+            ['label' => '🚀 Versione attuale', 'value' => '1.x'],
+            ['label' => '⭐ Star su GitHub', 'value' => 'XYZ'],
+            ['label' => '🛠️ Tecnologie', 'value' => 'PHP, MVC, MySQL'],
+         ]
       ],
+   ],
    'feature' =>
       [
          'active' => true,
@@ -109,35 +126,35 @@ return [
       ],
    'content' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'bento' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'promo' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'product-features' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'cta' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
@@ -145,56 +162,56 @@ return [
 
    'price' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'stats' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'team' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'testimonial' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'logos' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'blog' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'newsletter' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
       ],
    'footer' =>
       [
-         'active' => true,
+         'active' => false,
          'pages' => ['index'],
          'data' => [
          ],
