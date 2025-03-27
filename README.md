@@ -15,3 +15,5 @@ Project released under MIT License. More details here [LICENSE](LICENSE) .
 - PHP 7.4 o higher
 
 ## Installazione
+
+## WORK IN PROGRESS
