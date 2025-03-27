@@ -15,9 +15,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.A2_SSH_KEY }}
           
-      - name: Debug SSH Key
+      - name: Verify SSH Key
         run: |
-          echo "${{ secrets.A2_SSH_KEY }}" | ssh-keygen -l -f /dev/stdin
+          ssh-add -l
           
       - name: Deploy files
         run: |
