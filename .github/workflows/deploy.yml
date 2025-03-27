@@ -14,7 +14,11 @@ jobs:
         uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.A2_SSH_KEY }}
-
+          
+      - name: Debug SSH Key
+        run: |
+          echo "${{ secrets.A2_SSH_KEY }}" | ssh-keygen -l -f /dev/stdin
+          
       - name: Deploy files
         run: |
           rsync -avz \
