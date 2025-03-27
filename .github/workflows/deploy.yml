@@ -15,9 +15,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.A2_SSH_KEY }}
           
-      - name: Verify SSH Key
-        run: |
-          ssh-add -l
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: |
+            $(echo "${{ secrets.A2_SSH_KEY }}" | base64 --decode)
           
       - name: Deploy files
         run: |
