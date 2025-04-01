@@ -1,7 +1,7 @@
-name: Deploy to A2 Hosting
+name: TEST Deploy to A2 Hosting 
+
 on:
-  push:
-    branches: [test]
+  workflow_dispatch: # Permette l'avvio manuale
 
 jobs:
   deploy:
@@ -9,23 +9,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.A2_SSH_KEY }}
-                    
-      - name: Deploy files
-        run: |
-          rsync -avz \
-          --progress \
-          --delete \
-          --exclude-from=".rsyncignore" \
-          -e "ssh -p ${{ secrets.A2_PORT }} -o LogLevel=ERROR -o StrictHostKeyChecking=no" \
-          ./ ${{ secrets.A2_USER }}@${{ secrets.A2_HOST }}:${{ secrets.A2_PATH_TEST}}
 
-      - name: Sync files
+      - name: Full Deploy
         run: |
-          rsync -avz --exclude-from="$GITHUB_WORKSPACE/.rsyncignore" \
-          -e "ssh -p ${{ secrets.A2_PORT }}" \
+          echo "🎯 Inizio deploy iniziale..."
+          rsync -avz --progress --delete \
+          -e "ssh -p ${{ secrets.A2_PORT }} -o StrictHostKeyChecking=no" \
           ./ ${{ secrets.A2_USER }}@${{ secrets.A2_HOST }}:${{ secrets.A2_PATH_TEST }}
+          echo "✅ Deploy su TEST completato!"
